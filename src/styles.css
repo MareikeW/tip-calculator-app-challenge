@@ -1,7 +1,177 @@
+:root {
+    --strongCyan: hsl(172, 67%, 45%);
+    --veryDarkCyan: hsl(183, 100%, 15%);
+    --darkGrayishCyan: hsl(186, 14%, 43%);
+    --darkGrayishCyanTwo: hsl(184, 14%, 56%);
+    --lightGrayishCyan: hsl(185, 41%, 84%);
+    --lightGrayishCyanTwo: hsl(189, 41%, 97%);
+    --white: hsl(0, 0%, 100%);
+}
+
 *,
 *::before,
 *::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body {
+    font-family: 'Space Mono', monospace;
+    background-color: var(--lightGrayishCyan);
+    margin: 0 auto; 
+}
+
+h1 {
+    color: var(--darkGrayishCyan);
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    margin: 40px auto;
+}
+
+h2 {
+    color: var(--darkGrayishCyanTwo);
+    font-size: 16px;
+    padding-top: 24px;
+}
+
+input {
+    font-size: 24px;
+    width: 100%;
+    text-align: right;
+    background-color: var(--lightGrayishCyanTwo);
+    border-radius: 8px;
+    border: none;
+    padding: 8px 15px;
+    font-family: inherit;
+    font-weight: bold;
+}
+
+input:focus {
+    outline-color: var(--strongCyan);
+}
+
+button {
+    cursor: pointer;
+}
+
+main {
+    margin: 0 auto;
+    width: 375px;
+    background-color: var(--white);
+    border-radius: 16px;
+    padding: 0 24px;
+    padding-bottom: 12px;
+}
+
+.container {
+    margin: 0 auto;
+}
+
+.container > h2 {
+    margin-bottom: 10px;
+}
+
+.icon {
+    position: relative;
+}
+
+.icon::before {
+    content: "";
+    position: absolute;
+    left: 15px;
+    top: 0;
+    bottom: 0;
+    width: 10px;
+    height: 17px;
+    background-repeat: no-repeat;
+    background: url("/src/images/icon-dollar.svg");
+}
+
+.btn-tip-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 15px;
+}
+
+.btn-tip {
+    padding: 6px 0;
+    color: var(--white);
+    background-color: var(--veryDarkCyan);
+    font-size: 24px;
+    border: none;
+    border-radius: 8px;
+    font-family: inherit;
+    font-weight: bold;
+}
+
+.btn-tip:hover,
+.btn-tip:focus {
+    background-color: var(--strongCyan);
+    color: var(--veryDarkCyan);
+}
+
+.custom-tip::placeholder {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--darkGrayishCyanTwo);
+}
+
+#icon-people::before {
+    background: url("/src/images/icon-person.svg");
+    width: 13px;
+    height: 16px;
+}
+
+.result-container {
+    background-color: var(--veryDarkCyan);
+    border-radius: 16px;
+    padding: 24px;
+    margin: 30px auto;
+}
+
+h3 {
+    color: var(--white);
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.flex span {
+    color: var(--darkGrayishCyanTwo);
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.result-tip,
+.result-total {
+    font-size: 30px;
+    font-weight: bold;
+    color:var(--strongCyan);
+    margin-top: 24px;
+}
+
+.btn-reset {
+    width: 100%;
+    padding: 8px 15px;
+    border-radius: 8px;
+    background-color: var(--strongCyan);
+    border: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-family: inherit;
+    margin-top: 24px;
+}
+
+.btn-reset:hover,
+.btn-reset:focus {
+    background-color: var(--lightGrayishCyan);
 }
